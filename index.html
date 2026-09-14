@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.svg">
+  <title >JSS 2 Pocket Money & Savings Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="nav-logo-icon">₦</span>
+      <span>Smart Save</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about-section">About App</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <!-- MAIN APP CARD -->
+    <div class="app-card">
+      <h1>Student Savings Planner</h1>
+      <p class="subtitle">JSS 3 Financial Literacy Project</p>
+
+      <!-- SECTION 1: DAILY BUDGET INPUT -->
+      <div class="form-group">
+        <label for="dailyMoney">Daily Pocket Money (₦):</label>
+        <input type="number" id="dailyMoney" placeholder="e.g., 500">
+      </div>
+
+      <!-- DYNAMIC INPUTS FOR ITEM NAME AND COST -->
+      <div class="form-row">
+        <div class="form-group flex-2">
+          <label for="itemNameInput">Item / Snack Name:</label>
+          <input type="text" id="itemNameInput" placeholder="e.g., Meatpie, Exercise Book">
+        </div>
+
+        <div class="form-group flex-1">
+          <label for="itemCostInput">Cost (₦):</label>
+          <input type="number" id="itemCostInput" placeholder="e.g., 150">
+        </div>
+      </div>
+
+      <button id="addExpenseBtn">Add Expense to List</button>
+
+      <!-- SECTION 2: SUMMARY & CALCULATIONS -->
+      <div class="section">
+        <h3 class="section-title">Today's Expenses</h3>
+        <ul id="expenseList" class="item-list">
+          <!-- Dynamically filled via JS -->
+        </ul>
+
+        <button id="calculateBtn" class="accent-btn">Calculate Savings</button>
+
+        <div id="resultBox" class="result-card" style="display: none;">
+          <p class="result-item"><strong>Total Expense:</strong> ₦<span id="totalExpenseText">0</span></p>
+          <p class="result-item"><strong>Daily Savings:</strong> ₦<span id="dailySavingsText">0</span></p>
+          <p class="result-item"><strong>5-Day School Week Savings:</strong> ₦<span id="weeklySavingsText">0</span></p>
+          <div id="adviceText" class="advice"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT CARD SECTION -->
+    <div id="about-section" class="about-card">
+      <h2>About This App</h2>
+      <p>
+        The <strong>Smart Student Savings Planner</strong> is a practical web application built by JSS 2 students of <strong>TEEVES INT'L SCHOOLS</strong> to help students track their daily spendings and estimate weekly savings based on daily allowance. It combines basic financial literacy with fundamental web programming.
+      </p>
+      <p>
+        By using this tool, students learn to calculate daily allowances, track break-time snack spending, and set targets for weekly savings toward essential items like books, pens, and footwear.
+      </p>
+
+      <div class="concepts-container">
+        <span class="concepts-title">Key Topics Demonstrated:</span>
+        <div class="concepts-tag-list">
+          <span class="tag">Operators & Conditionals</span>
+          <span class="tag">Loops & Functions</span>
+          <span class="tag">DOM Manipulation</span>
+          <span class="tag">Events & Interactivity</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
